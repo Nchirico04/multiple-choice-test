@@ -1,0 +1,130 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    /* making question box on the middle */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-color:  #ffcba7; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+}
+
+#view-top-scores:hover{
+    cursor:grab
+
+}
+
+header h2{
+    padding-left: 20px; 
+    font-size: 15px;
+    display: inline;
+}
+
+
+.timer{
+    font-size: 25px;
+    color: #b4c6dc;
+    display: inline;
+    text-align: left;
+    padding-right:25px ;
+    text-shadow: 4px;
+}
+.container{
+    background-color: #ffeadc ;
+    /* width: 50%; */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px 4px;
+    flex-direction: column;
+    margin: auto;
+
+}
+.start{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+.questions {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    margin: auto;
+  }
+.questions{
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px 25px;
+    margin: auto;
+}
+
+/* buttons */
+#start-button{
+    font-size: 25px;
+    color: #9bb0b8 ;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 7px;
+    margin: 20px 0;
+}
+.button{
+    background-color: aliceblue;
+    border-radius: 15px;
+    box-shadow: 0 5px #b4c6dc;
+    cursor: grab;
+}
+.button:active{
+    border: none;
+    outline: none;
+    box-shadow:  0 0 #ffeadc
+}
+.button:focus{
+    outline: none;
+}
+/* show and hide part */
+.show{
+    display: flex;
+}
+
+.hide{
+    display: none;
+}
+
+.banner{
+    font-size: 20px;
+    text-align: center;
+    font-style: oblique;
+}
+
+ol{
+    list-style-type: number;
+}
+
+@media screen and (max-width: 992px) {
+	.html {
+		width: 50%;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+	.html {
+		width: 100%;
+	}
+
+} 

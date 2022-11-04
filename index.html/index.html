@@ -1,43 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-B">
-    <meta http-equiv="X-UA-Compatible" content"IE-edge">
-    <meta name="viewport" content="width=device-width, inital scale=1.0">
-    <link rel="stylesheet" href"style.css">
-    <title Quiz App </title/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>JavaScript Quiz</title>
+    <!-- title -->
 </head>
 <body>
-
- <div class="quiz-container" id="quiz">
-        <div class="quiz-header">
-            <h2 id=question"> question text </h2>
-            <ul>
-                <li>
-                    <input type="radio" name"answer" id="a" class="answer">
-                    <label for+"a" id="a_text> answer </label>
-                </li>
-
-                <li>
-                    <input type="radio" name"answer" id="b" class="answer">
-                    <label for+"b" id="b_text> answer </label>
-                </li>
-
-                <li>
-                    <input type="radio" name"answer" id="c" class="answer">
-                    <label for+"c" id="c_text> answer </label>
-                </li>
-
-                <li>
-                    <input type="radio" name"answer" id="d" class="answer">
-                    <label for+"d" id="d_text> answer </label>
-                </li>
-
-            </ul>
+    <header>
+        <h3 id="view-top-scores">View Top Scores</h3>
+        <h2 class="timer">Time: <span id="timer"></span>
+        </h2>    
+    </header>
+    
+    <div id="start" class="show">
+        <div class="container start">
+        <h2>Welcome to JavaScript quiz</h2>
+        <p>Answer the questions based on your knowledge and try to beat the time.</p>
+        <br>
+        <p>Every incorrect answer will subtract 10 seconds from your clock.</p>
+        <!-- <p>Press start to begin</p> -->
+        <button class = "button start" id="start-button">Start the quiz</button>
         </div>
-        <button id="submit">submit</button>
-
     </div>
-  
+    <!-- div for button to start the quiz -->
 
-    script src="script.js"></script>
+        <!--div with class container for everything on the screen  -->
+        <div id="question-container" class="hide">
+            <div class="container questions">
+
+               <!-- div for questionsto hel us with ja and it will be hidden -->
+              <div id="questions">
+
+              </div>
+              <div id="answers-buttons" class="btn-grid">
+              <!--the answer part of the box  -->
+              </div>
+            </div>
+        </div>  
+      
+        <!--If player run out of the time the game stops -->
+        <div id="timeisup" class="hide">
+            <div class="end container">
+                <div id="score-banner">
+                  <h2>Game Over! </h2>
+                </div>
+                <form id="player" class="name">
+                  <p>Enter your name in the box!
+                    <input type="text" name="name" id="name" class="text-input"/> 
+                    <button class="button start" id="submit-score" type="submit">Score</button>
+                  </p>
+                </form>
+          </div>
+        </div>
+    
+    <div id="topscore-area"  class="hide"> 
+        <div class="topscores container">
+         <h2 class="top-score"> Top Scores</h2>
+         <ol id="users-scores" class="score-list"> </ol>
+        <div> 
+         <button class="button" id="start-over" >Start Over</button>
+         <button class="button" id="clear-top-scores">Clear Top Scores</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hide" id="correct">
+        <h2>Correct!</h2>
+    </div>
+    <div class="hide" id="incorrect">
+        <h2>Incorrect! </h2>
+    </div>
+ <script src="./assets/quiz.js"></script> 
+
+</body>
+</html>
